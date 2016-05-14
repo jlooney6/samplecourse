@@ -112,9 +112,9 @@ Refer to the examples above.
 *** =sct
 ```{r}
 test_student_typed("5 + 3", not_typed_msg = "Did you add 5 and 3 with the `+` operator?")
-test_student_typed("20 - 10", "Did you subtract 10 from 20 using the `-` operator?")
+test_student_typed("20 - 10", not_typed_msg = "Did you subtract 10 from 20 using the `-` operator?")
 test_student_typed("10 * 67", not_typed_msg = "Did you multiply 10 and 67 with the `*` operator?")
-test_student_typed("25 / 5", "Did you divide 25 by 5 using the `/` operator?")
+test_student_typed("25 / 5", not_typed_msg = "Did you divide 25 by 5 using the `/` operator?")
 
 # Final message the student will see upon completing the exercise
 success_msg("Good work!")

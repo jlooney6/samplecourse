@@ -81,40 +81,37 @@ Refer to the examples above.
 
 *** =sample_code
 ```{r}
-# Addition
+# Define v as a vector containing 1, 2, and 3
 
 
-# Subtraction
+# Find missing values: missing
 
 
-# Multiplication
+# Print missing to the console
 
-
-# Division
 
 ```
 
 *** =solution
 ```{r}
-# Addition
-5 + 3
+# Define v as a vector containing 1, 2, and 3
+v <- c(1, 2, 3)
 
-# Subtraction
-20 - 10
+# Find missing values: missing
+missing <- is.na(v)
 
-# Multiplication
-10 * 67
+# Print missing to the console
+missing
 
-# Division
-25 / 5
 ```
 
 *** =sct
 ```{r}
-test_student_typed("5 + 3", not_typed_msg = "Did you add 5 and 3 with the `+` operator?")
-test_student_typed("20 - 10", not_typed_msg = "Did you subtract 10 from 20 using the `-` operator?")
-test_student_typed("10 * 67", not_typed_msg = "Did you multiply 10 and 67 with the `*` operator?")
-test_student_typed("25 / 5", not_typed_msg = "Did you divide 25 by 5 using the `/` operator?")
+test_correct({test_object("missing")}, 
+             {
+               test_function("is.na", args = "x")
+               test_error()
+             })
 
 # Final message the student will see upon completing the exercise
 success_msg("Good work!")
